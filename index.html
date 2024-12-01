@@ -7,8 +7,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport"
         content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
-    <link rel="manifest" href="https://lumarigames.github.io/desmume-wasm/manifest.json">
-    <link rel="preload" href="https://lumarigames.github.io/desmume-wasm/audio-worklet.js" as="script">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preload" href="audio-worklet.js" as="script">
     <link rel="apple-touch-icon" href="icon.png">
     <link href="dark.css" rel="stylesheet">
     <title>DS Player</title>
@@ -268,14 +268,14 @@
         <canvas id="top" width="256" height="192"></canvas>
         <canvas id="bottom" width="256" height="192"></canvas>
     </div>
-    <script src="https://lumarigames.github.io/desmume-wasm/localforage.js"></script>
-    <script src="https://lumarigames.github.io/desmume-wasm/pako.min.js"></script>
-    <script src="https://lumarigames.github.io/desmume-wasm/app.js"></script>
+    <script src="localforage.js"></script>
+    <script src="pako.min.js"></script>
+    <script src="app.js"></script>
     <script>
-        var jsFile = "https://lumarigames.github.io/desmume-wasm/build/nds.js";
+        var jsFile = "./build/nds.js";
         if (localStorage) {
             if (localStorage['simd'] == "1") {
-                jsFile = "https://lumarigames.github.io/desmume-wasm/build-simd/nds.js";
+                jsFile = "./build-simd/nds.js";
             }
             if (localStorage['showEA'] == "1") {
                 $id('cfg-ea').hidden = false;
