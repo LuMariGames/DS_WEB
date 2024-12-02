@@ -1,26 +1,6 @@
-var CACHE_NAME = 'v76';
+var CACHE_NAME = 'v2';
 
-
-var urlsToCache = [
-    '/',
-    '/app.js',
-    '/localforage.js',
-    '/pako.min.js',
-    '/manifest.json',
-    '/dark.css',
-    '/favicon.ico',
-    '/icon.png',
-    '/build/nds.js',
-    '/build/nds.wasm',
-    '/build-simd/nds.js',
-    '/build-simd/nds.wasm',
-    /*
-    '/gba/a.out.js',
-    '/gba/a.out.wasm',
-    '/gba/icon.png',
-    '/gba/',
-    '/gba/localforage.js',*/
-];
+var urlsToCache = [];
 
 self.addEventListener('install', function (event) {
     postMsg({msg:'Updating...'});
